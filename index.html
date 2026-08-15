@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — AIエージェントと働く</title>
+<style>
+  :root {
+    --bg: #fdf8f3;
+    --paper: #ffffff;
+    --ink: #2b2a26;
+    --muted: #7a7468;
+    --accent: #d96c4e;
+    --accent-soft: #fbe6dc;
+    --line: #ebe3d6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", "Segoe UI", sans-serif;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 28px 96px;
+  }
+  header {
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.08em;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin: 16px 0 8px;
+  }
+  .sub { color: var(--muted); font-size: 15px; margin: 4px 0 0; }
+  .card {
+    display: block;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin: 22px 0;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .card .date {
+    font-size: 12.5px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .card h2 {
+    font-size: 19px;
+    margin: 6px 0 8px;
+    color: var(--accent);
+    line-height: 1.5;
+  }
+  .card p { margin: 0; font-size: 14.5px; color: #4a463f; }
+  footer {
+    margin-top: 60px;
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="tag">ARTICLES</span>
+  <h1>AIエージェントと働く</h1>
+  <p class="sub">ハーネスエンジニアリングと記憶システムをめぐる記事集</p>
+</header>
+
+<a class="card" href="llm-wiki-talk-2026-08/memory-over-skills.html">
+  <span class="date">2026-08</span>
+  <h2>スキルを書かないという設計 — 記憶システムはモデルの賢さを待っていた</h2>
+  <p>きちんと設計した記憶システムは、モデルが一定より賢くなると、多くのケースでスキルを不要にし——それ以上の機能と性能をもたらす。「スキルを書け」の大合唱への、実運用からの応答。</p>
+</a>
+
+<a class="card" href="claude-code-talk-2026-05/claude-code-story-public.html">
+  <span class="date">2026-05</span>
+  <h2>Claude Code の誕生 — 「音楽を当てるだけ」だったツールの話</h2>
+  <p>史上最速で成長した企業の中心エンジンは、新しい巨大モデルではなく「薄いハーネス」だった。Product Overhang とハーネスエンジニアリングの物語。</p>
+</a>
+
+<footer>
+  <p>
+    記事で紹介している記憶システムのスターターキット:
+    <a href="https://github.com/ldk00315-jpg/llm-wiki-kit">llm-wiki-kit（GitHub）</a>
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
