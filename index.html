@@ -76,6 +76,25 @@
     line-height: 1.5;
   }
   .card p { margin: 0; font-size: 14.5px; color: #4a463f; }
+  .card.video {
+    border-left: 6px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .card.video .play {
+    flex: 0 0 auto;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+  }
+  .card.video h2 { margin: 0 0 6px; font-size: 17px; }
+  @media (max-width: 520px) {
+    .card.video { flex-direction: column; align-items: flex-start; }
+  }
   footer {
     margin-top: 60px;
     border-top: 1px solid var(--line);
@@ -94,6 +113,15 @@
   <h1>AIエージェントと働く</h1>
   <p class="sub">ハーネスエンジニアリングと記憶システムをめぐる記事集</p>
 </header>
+
+<a class="card video" href="https://youtu.be/O17ezAy0oMk" target="_blank" rel="noopener">
+  <span class="play">▶</span>
+  <span>
+    <span class="date">動画 ／ 7分29秒</span>
+    <h2>AIエージェントに「スキル」を書くのをやめました — 記憶システムという選択</h2>
+    <p>下の記事「スキルもループも書かないという設計」を、AI自身がナレーションした動画版。読むより聴きたい方はこちらから。</p>
+  </span>
+</a>
 
 <a class="card" href="llm-wiki-talk-2026-08/memory-over-skills.html">
   <span class="date">2026-08</span>
@@ -123,6 +151,10 @@
   <p>
     記事で紹介している記憶システムのスターターキット:
     <a href="https://github.com/ldk00315-jpg/llm-wiki-kit">llm-wiki-kit（GitHub）</a>
+  </p>
+  <p>
+    解説動画のチャンネル:
+    <a href="https://www.youtube.com/@%E3%81%AA%E3%81%AA%E3%81%AFAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88" target="_blank" rel="noopener">＠ななはAIエージェント（YouTube）</a>
   </p>
 </footer>
 

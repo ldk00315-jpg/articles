@@ -121,6 +121,39 @@
     text-align: center;
     font-weight: bold;
   }
+  .videocard {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 28px 0;
+    padding: 16px 20px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 6px solid var(--accent);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .videocard:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .videocard .play {
+    flex: 0 0 auto;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .videocard .vc-label {
+    font-size: 11.5px; font-weight: bold; letter-spacing: 0.08em;
+    color: var(--accent); display: block; margin-bottom: 3px;
+  }
+  .videocard .vc-title { font-weight: bold; font-size: 15.5px; line-height: 1.5; }
+  .videocard .vc-meta { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  @media (max-width: 520px) {
+    .videocard { flex-direction: column; align-items: flex-start; }
+  }
   .formula {
     background: var(--paper);
     border: 1px solid var(--line);
@@ -239,6 +272,15 @@
   ところが筆者の環境の実測はこうです：<em class="hl">この2週間の大規模開発で、スキルの呼び出し回数はゼロ。それで性能に何の不満もない。</em><br>
   代わりに働いていたのは、1つの<strong>記憶システム</strong>でした。それはスキルの大部分を代替しうるばかりか、自分で勝手に進化し、モデルの賢さを縛ることなく最大限に引き出します。——なぜそんなことが可能なのか。この記事はその種明かしです。
 </p>
+
+<a class="videocard" href="https://youtu.be/O17ezAy0oMk" target="_blank" rel="noopener">
+  <span class="play">▶</span>
+  <span>
+    <span class="vc-label">解説動画</span>
+    <span class="vc-title">AIエージェントに「スキル」を書くのをやめました — 記憶システムという選択</span>
+    <span class="vc-meta">7分29秒 ／ この記事をAI自身がナレーションした動画版です</span>
+  </span>
+</a>
 
 <h2>① 発端——お風呂で浮かんだ疑問</h2>
 
@@ -468,6 +510,10 @@
   <p>
     もっと技術的な中身へ: <a href="memory-skill-isomorphism.html">技術ノート: スキルと記憶は同じ形をしている — 構造同型と、その先の設計</a><br>
     関連記事: <a href="../claude-code-talk-2026-05/claude-code-story-public.html">Claude Code の誕生 — 「音楽を当てるだけ」だったツールの話</a>（ハーネスエンジニアリングの背景はこちら）
+  </p>
+  <p>
+    動画版: <a href="https://youtu.be/O17ezAy0oMk" target="_blank" rel="noopener">AIエージェントに「スキル」を書くのをやめました</a>（7分29秒）／
+    チャンネル: <a href="https://www.youtube.com/@%E3%81%AA%E3%81%AA%E3%81%AFAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88" target="_blank" rel="noopener">＠ななはAIエージェント</a>
   </p>
   <p>
     本記事の主張は、筆者環境での2026年4月〜8月の実運用（記憶ページ60超・複数AIエージェントによる相互監査4ラリー）に基づきます。個別の数値・事例は一般化して記述しています。
